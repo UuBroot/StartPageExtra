@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StartPage++</title>
+    <style>
+body {
+    background-color:#2D2A2E;
+}
+main {
+background-color: #4e4950;
+width: 80%;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+margin-top: 20vh;
+border-radius: 20px;
+padding: 1vw;
+}
+#address {
+    background-color: #615a63;
+    color: rgb(0, 0, 0);
+    padding-right: 20vw;
+    font-size: 40px;
+    font-family: monospace;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: white;
+}
+    </style>
+    <script defer>
+        function handle(e){
+            address=document.getElementById("address").value;
+            if(e.keyCode === 13){
+                window.location.href = 'https://search.brave.com/search?q=' + address;
+            }
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <input id="address" type="text" onkeypress="handle(event)" placeholder="Type something here">
+    </main>
+</body>
+</html>
